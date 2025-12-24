@@ -1,0 +1,15 @@
+﻿I see the issue! During my updates, the `check_nmap_installed()` function got lost. Let me fix the entire script:Perfect! I've fixed the error. The problem was that the `check_nmap_installed()` function got accidentally removed during my updates. 
+
+The script is now complete and should work properly. Try running it again:
+
+```bash
+python "nmap_scanner (1).py"
+```
+
+All functions are now properly defined and the script should run without any errors. It will:
+1. ✅ Validate your IP address
+2. ✅ Run the nmap scan
+3. ✅ Show detailed port information with what you can do with each port
+4. ✅ Ask if you want to save to a file and let you choose the location
+
+Let me know if you encounter any other issues!

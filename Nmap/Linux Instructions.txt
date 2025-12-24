@@ -1,0 +1,53 @@
+﻿Yes! The script is fully compatible with Kali Linux and other Linux distributions. Let me update it to be platform-agnostic:Perfect! I've updated the script to be fully cross-platform. Here's what makes it compatible:
+
+## ✅ **Full Linux Compatibility**
+
+The script now works on:
+- **Kali Linux** (nmap is usually pre-installed!)
+- **Ubuntu/Debian**
+- **Fedora/RHEL/CentOS**
+- **Arch Linux**
+- **Any other Linux distribution**
+- **Windows** (as before)
+- **macOS**
+
+## 🔧 **What Changed:**
+
+1. **Auto-detects your OS** - The title now shows your actual operating system
+2. **Platform-specific installation instructions** - Shows the right command for your OS
+3. **Cross-platform file paths** - Already used `os.path.join()` which works everywhere
+4. **Colorama works on all platforms** - Handles terminal colors on Windows/Linux/Mac
+
+## 📦 **Installation on Linux:**
+
+**Kali Linux** (nmap usually pre-installed):
+```bash
+# If needed:
+sudo apt install nmap python3-pip
+pip3 install colorama
+```
+
+**Ubuntu/Debian:**
+```bash
+sudo apt install nmap python3-pip
+pip3 install colorama
+```
+
+**Fedora/RHEL:**
+```bash
+sudo dnf install nmap python3-pip
+pip3 install colorama
+```
+
+**Arch Linux:**
+```bash
+sudo pacman -S nmap python-pip
+pip install colorama
+```
+
+## 🚀 **Running on Linux:**
+```bash
+python3 nmap_scanner.py
+```
+
+The script will automatically detect you're on Linux and show appropriate messages!

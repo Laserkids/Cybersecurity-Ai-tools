@@ -1,0 +1,95 @@
+﻿Yes, absolutely! In fact, it will work **even better** on Linux (especially Kali) because:
+
+✅ **Native packet capture** - No need for Npcap  
+✅ **Better Scapy support** - Scapy was designed for Linux  
+✅ **Wireshark is native** - Built for Linux environments  
+✅ **Kali Linux** - Already has many security tools pre-installed  
+
+## Installation for Linux (Kali, Ubuntu, Debian, etc.)
+
+### 1. Install Ollama
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+### 2. Pull a Model
+```bash
+# Start Ollama (if not auto-started)
+ollama serve &
+
+# Pull a model
+ollama pull llama3.2        # Recommended
+ollama pull mistral         # Alternative
+ollama pull phi3            # Smaller/faster
+```
+
+### 3. Install Python Dependencies
+
+**For Kali Linux:**
+```bash
+sudo apt update
+sudo apt install python3-tk python3-pip
+pip3 install scapy requests
+```
+
+**For Ubuntu/Debian:**
+```bash
+sudo apt update
+sudo apt install python3-tk python3-pip tcpdump
+pip3 install scapy requests
+```
+
+**For Fedora/RHEL:**
+```bash
+sudo dnf install python3-tkinter python3-pip tcpdump
+pip3 install scapy requests
+```
+
+**For Arch Linux:**
+```bash
+sudo pacman -S tk python-pip tcpdump
+pip install scapy requests
+```
+
+### 4. Set Permissions (Important for Packet Capture)
+```bash
+# Allow non-root packet capture (recommended)
+sudo setcap cap_net_raw,cap_net_admin=eip $(which python3)
+
+# OR run with sudo when capturing live traffic
+```
+
+### 5. Run the Application
+```bash
+python3 wireshark_ai_analyzer.py
+
+# Or if you need root for packet capture:
+sudo python3 wireshark_ai_analyzer.py
+```
+
+## Kali Linux Benefits
+
+Kali is **perfect** for this tool because it comes with:
+- 🔧 Wireshark pre-installed
+- 🔧 tcpdump and network tools ready
+- 🔧 Better packet capture capabilities
+- 🔧 Security-focused environment
+
+## Additional Linux Tips
+
+**Check if Ollama is running:**
+```bash
+curl http://localhost:11434/api/tags
+```
+
+**View available models:**
+```bash
+ollama list
+```
+
+**Start Ollama manually if needed:**
+```bash
+ollama serve
+```
+
+The application works identically on Linux - same GUI, same features, just with better native support for network analysis tools!

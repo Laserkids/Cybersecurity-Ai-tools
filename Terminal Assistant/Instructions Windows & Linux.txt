@@ -1,0 +1,66 @@
+﻿I'll create a cross-platform AI terminal assistant that integrates with Ollama and works on both Kali Linux and Windows. This tool will monitor your commands, provide analysis, and generate project summaries.I've created a cross-platform AI Terminal Assistant that integrates with Ollama! Here's how to set it up:
+
+## **Prerequisites**
+
+### 1. **Install Ollama**
+- **Linux (Kali)**: `curl -fsSL https://ollama.com/install.sh | sh`
+- **Windows**: Download from [ollama.com](https://ollama.com/download)
+
+### 2. **Install Llama 3.2**
+```bash
+ollama pull llama3.2
+```
+
+### 3. **Start Ollama Server**
+```bash
+ollama serve
+```
+
+### 4. **Install Python Dependencies**
+```bash
+pip install requests
+```
+
+## **Features**
+
+✅ **Command Analysis** - AI analyzes commands before execution  
+✅ **Mistake Detection** - Identifies potential risks and errors  
+✅ **Cross-Platform** - Works on Kali Linux & Windows  
+✅ **Session Logging** - Tracks all commands and results  
+✅ **Project Summaries** - Generates comprehensive overviews  
+✅ **Auto-Save** - Exports summaries to txt files  
+
+## **Usage**
+
+### **Run the Assistant**
+```bash
+# Linux
+python3 terminal_assistant.py
+
+# Windows
+python terminal_assistant.py
+```
+
+### **Commands**
+- Type any command to analyze and execute it
+- `analyze <command>` - Only analyze without running
+- `summary` - View current session summary
+- `save` - Save summary to file immediately
+- `exit` - Exit and auto-save summary
+
+### **Example Session**
+```
+Kali Linux> ls -la
+🔍 Analyzing command...
+[AI provides analysis and safety check]
+⚡ Execute command? (y/n): y
+```
+
+## **Output Files**
+Summaries are saved to `ai_terminal_outputs/summary_YYYYMMDD_HHMMSS.txt` with:
+- Project overview
+- Commands executed
+- Issues detected
+- Recommendations
+
+The tool provides real-time AI assistance while keeping detailed logs for project documentation! 🚀

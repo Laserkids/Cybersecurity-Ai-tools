@@ -1,0 +1,50 @@
+﻿Perfect! I've updated it to use Ollama instead. This is completely local and free!
+
+## Setup Instructions for Windows 11
+
+### 1. Install Ollama
+- Download Ollama from https://ollama.ai
+- Run the installer
+- Ollama will automatically start in the background
+
+### 2. Pull a Model
+Open Command Prompt or PowerShell and run:
+```bash
+# Recommended models (choose one or more):
+ollama pull llama3.2        # Fast and good (2GB)
+ollama pull llama3.1        # More capable (4.7GB)
+ollama pull mistral         # Great alternative (4GB)
+ollama pull phi3            # Smaller, faster (2.3GB)
+```
+
+### 3. Install Python Dependencies
+```bash
+pip install scapy requests tk
+```
+
+You may also need **Npcap** for packet capture:
+- Download from https://npcap.com/
+- Install with default options
+
+### 4. Run the Application
+```bash
+python wireshark_ai_analyzer.py
+```
+
+## Key Features
+
+✅ **100% Local** - No API keys, no internet required  
+✅ **Free** - No costs whatsoever  
+✅ **Private** - Your network data never leaves your machine  
+✅ **Multiple Models** - Choose from llama, mistral, phi3, etc.  
+✅ **Auto-detect Models** - Automatically finds installed Ollama models  
+✅ **Connection Status** - Shows if Ollama is running  
+
+## How to Use
+
+1. Make sure Ollama is running (it usually auto-starts)
+2. Load your Wireshark .pcap/.pcapng file
+3. Select your preferred model from the dropdown
+4. Ask questions about your network traffic!
+
+The app will automatically detect which models you have installed in Ollama and let you switch between them.
