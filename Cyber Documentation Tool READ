@@ -1,0 +1,23 @@
+🛡️ Cybersecurity Documentation Tool v4.0
+A powerful, AI-enhanced desktop tool for real-time cybersecurity analysis, screen monitoring, and automated reporting. Built with PyQt6 and integrated with OCR, Ollama models, and Google Drive.
+Key Features:
+- 🔍 Live Screen Capture with FPS tracking
+- 🧠 AI Analysis using local/remote models (LLaMA, Qwen, WizardCoder, etc.)
+- 📜 Command Extraction from screen OCR and visual context
+- 📊 Multi-Frame Analysis for temporal command detection
+- 🧾 Auto-Generated Reports with findings and summaries
+- 🧠 AI Chatbox for clarifying questions and summaries
+- 🗂️ Command History Tracking with timestamps and sources
+- 🎥 Screen Recording to MP4
+- ☁️ Google Drive Upload for saved reports
+- ⚙️ Settings Panel with model testing and RAM awareness
+- 🌈 RGB UI with animated header and themed tabs
+- 🧪 Model Fallback Logic for low-RAM environments
+- 🧠 OCR Debug Tab for raw text inspection
+- 📁 Local Storage in ~/.cybersec with config, logs, and reports
+
+Tech Stack:
+Python · PyQt6 · OpenCV · Tesseract · MSS · Ollama · Google Drive API · psutil
+Usage:
+Run python cybersec_tool.py and configure your model + server in Settings.
+Requires Tesseract and optional Google credentials for Drive upload.
